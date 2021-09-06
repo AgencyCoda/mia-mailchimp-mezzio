@@ -38,7 +38,7 @@ class Mailchimp extends BaseService
         }
         // Enviamos Email
         try {
-            return $this->apiInstance->messages->send($data);
+            return $this->apiInstance->messages->send(['key' => $this->apiKey, 'message' => $data]);
         } catch (\Exception $th) {
             return $th->getMessage();
         }
