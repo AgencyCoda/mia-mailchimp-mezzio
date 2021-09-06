@@ -16,7 +16,7 @@ trait MailchimpTrait
      */
     protected $mailchimp;
 
-    public function getSendgrid(\Psr\Http\Message\ServerRequestInterface $request): Mailchimp
+    public function getMailchimp(\Psr\Http\Message\ServerRequestInterface $request): Mailchimp
     {
         if($this->mailchimp === null){
             $this->mailchimp = $request->getAttribute('Mailchimp');
